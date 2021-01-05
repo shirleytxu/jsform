@@ -5,22 +5,26 @@
     <meta charset="utf-8"></meta>
     <script defer src="myScript.js"></script>
     <style>
-    button {
+    #myDiv, button {
       font-size: 150%;
+    }
+    input {
+      font-size: 125%;
     }
     </style>
   </head>
   <body>
     <div id="myDiv">
-      <h1>This is not a header.</h1>
-      Here's a list of things:
-      <ul>
-        <li>A boat.</li>
-        <li>An apple.</li>
-        <li>The moons of Saturn.</li>
-        <li>Plate Tectonics.</li>
-      </ul>
-      <button onclick="myClick()">I'm a button. Click Me.</button>
+      <p>
+        <!-- Each label must be matched to an input -->
+        <label for='fname'>First Name:</label>
+        <!-- Good practice: give same name and id for every input -->
+        <input id='fname' name='fname' type='text' />
+        <br />
+        <label for='lname'>Last Name:</label>
+        <input id='lname' name='lname' type='text' />
+      </p>
+      <button onclick='myClick()'>I'm a button, click me!</button>
     </div>
   </body>
 </html>
