@@ -20,7 +20,6 @@ function myClick () {
   var lname = document.getElementById('lname').value;
   var pronouns = document.getElementById('pronouns').value;
   var cool = document.getElementById('cool').value;
-  console.log(fname, lname, pronouns);
 
   myJSON = {
     'fname': fname,
@@ -28,6 +27,9 @@ function myClick () {
     'pronouns': pronouns,
     'cool': cool,
   }
+
+  // console.log(JSON.parse(JSON.stringify(myJSON)));
+  console.log(myJSON);
   var validPronoun = false;
   if ((myJSON["pronouns"] == "he/him/his") || (myJSON["pronouns"] == "He/him/his")){
     var title = maleTitles[Math.floor(Math.random() * maleTitles.length)];
